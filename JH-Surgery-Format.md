@@ -1,6 +1,6 @@
 # JH Surgery Format — attach this file to Claude and describe your presentation
 
-*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.1 — August 2026. Installed-skill command: `/jhsurgeryformat`.*
+*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.2 — August 2026. Installed-skill command: `/jhsurgeryformat`.*
 
 # JH Surgery Format
 
@@ -147,7 +147,15 @@ Standard 16:9 template, footer label "Journal Club". Structure: Title (paper cit
 
 ### H. Letter on letterhead (JHH template default; Bayview reproduction)
 
-Default to the official Word letterhead template (`Letterhead_JHM_JHH.dot`, link in the asset library) or reproduce its layout (for Bayview-based authors, reproduce the layout with the `V-Bayview-2` lockup in place of the JHH lockup): JHM/JHH letterhead block, 1" margins, Arial/Times 11–12 pt, standard business-letter structure. Sign-off block: name, degrees, academic title, division, department, institution, contact line; leave several blank lines between "Sincerely," and the printed name for a handwritten signature. No PHI in letters drafted with this skill. **Style: write like a person, not a template — no em-dashes in letters** (use commas, colons, or separate sentences), vary sentence length, and avoid formulaic constructions; if a "humanizer"-type writing skill is available, apply it to letter prose.
+Letters from an individual use the **official JHM personalized-letterhead layout** (brand.hopkinsmedicine.org → Design Standards → Letterhead; specs below). Reproduce it exactly:
+
+- **Header geometry (8.5" × 11", header starts 1/2" from top):** personalization block at **1" from left, 1-3/4" wide** → address block, **3-1/4" wide** → brandmark top-right at **1-5/8" wide** (the vertical hospital lockup: `V-JHH-2.png`, or `V-Bayview-2.png` for Bayview-based authors).
+- **Personalization block:** author's name + degrees in **bold** ("Employee Name, M.D., Ph.D"), primary and secondary titles beneath in *italic*. Up to three names fit this configuration.
+- **Address block:** first line department/entity name in **bold**, then street address / suite, City, State ZIP, phone ("T"), fax ("F"), and the author's @jhmi.edu email. Placeholders for anything unknown.
+- **Typography and color:** print spec is Gill Sans, 8 pt on 10 pt leading — **electronic/Word letters substitute Arial** per the standard. All header text prints **JHM Blue (PMS 288 / `#002D72`)**.
+- **Body:** starts ~2.2" from top; Arial or Times 11–12 pt, standard business-letter structure. Sign-off block: name, degrees, academic title, division, department, institution, contact line; leave several blank lines between "Sincerely," and the printed name for a handwritten signature.
+- **Rules from the standard:** letterhead is for people employed by or officially connected to Johns Hopkins, for official activities only; **no other institution's logos or co-branding**; second sheets are blank. The generic (non-personalized) `Letterhead_JHM_JHH.dot` template remains available for department-level letters.
+- No PHI in letters drafted with this skill. **Style: write like a person, not a template — no em-dashes in letters** (use commas, colons, or separate sentences), vary sentence length, and avoid formulaic constructions; if a "humanizer"-type writing skill is available, apply it to letter prose.
 
 ## Step 5 — Smart enrichment (before delivering any draft)
 
@@ -386,6 +394,12 @@ These are historical measurements of the official 4:3 .potx masters, kept for co
 - **Recurring motifs:** gold accent bar along slide edge; Heritage Blue field or blue-duotone campus photography on title slides; reversed logo on dark grounds; "Presented by:" name + date band on the title slide.
 
 ---
+
+## Official letterhead standards (brand.hopkinsmedicine.org, Design Standards → Letterhead, updated 3/2023)
+
+- **General letterhead:** address block at 1" from left, 1/2" from top, 5" wide; brandmark 1-5/8" top-right; entity name in bold as the first address line; second sheets blank; no affiliate or other-institution logos or co-branding ever.
+- **Personalized letterhead:** personalization block (1" from left, 1-3/4" wide: name+degrees bold, titles italic, up to 3 names) → address block (3-1/4" wide: dept bold, address, T/F phone lines, @jhmi.edu email) → brandmark 1-5/8" top-right. 8.5"×11"; logo prints PMS 288 + PMS 7406; all header text JHM Blue; typography Gill Sans 8 pt / 10 pt leading (bold names, italic titles) — **Word/electronic versions substitute Arial**. Format applies to all approved brandmarks.
+- Pages: [General](https://brand.hopkinsmedicine.org/brand/design-standards/letterhead/general-letterhead) · [Personalized](https://brand.hopkinsmedicine.org/brand/design-standards/letterhead/personalized-letterhead)
 
 ## Notes for the JH Surgery Format skill
 
