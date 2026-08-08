@@ -13,7 +13,8 @@ It knows the department's design system (Heritage Blue and gold, the standard ti
 ## Quick start (no experience with Claude needed)
 
 1. Download **[`JH-Surgery-Format.md`](JH-Surgery-Format.md)** (click the file, then the download icon).
-2. Go to [claude.ai](https://claude.ai), start a new chat, and **attach the file**. (Or install [`jh-surgery-format.skill`](jh-surgery-format.skill) and type **`/jhsurgeryformat`**.)
+2. Go to [claude.ai](https://claude.ai), start a new chat, and **attach the file**. Works on every plan, including Free (enable "Code execution and file creation" under Settings → Capabilities).
+   *Prefer the installed skill?* Download [`jhsurgeryformat.zip`](jhsurgeryformat.zip), go to Customize → Skills → **+ Create skill**, upload the zip, then type **`/jhsurgeryformat`** in any chat.
 3. Say what you need in one or two sentences: the type of presentation, your topic, and where/when you're presenting.
 4. Answer the couple of questions Claude asks (talk length, background style). You'll get a draft file with `[bracketed placeholders]` wherever your content goes.
 
@@ -46,7 +47,8 @@ The installed skill is the token-efficient path, not just the beginner path:
 | Path | Purpose |
 |---|---|
 | [`JH-Surgery-Format.md`](JH-Surgery-Format.md) | **The attachable single file** — everything inlined; this is what most people need |
-| [`jh-surgery-format.skill`](jh-surgery-format.skill) | Installable skill package (for those who install skills rather than attach files) |
+| [`jhsurgeryformat.zip`](jhsurgeryformat.zip) | Installable skill package for claude.ai (Customize → Skills → upload) |
+| [`jh-surgery-format.skill`](jh-surgery-format.skill) | Same package in .skill form (for Claude Code / Cowork) |
 | [`skill/SKILL.md`](skill/SKILL.md) | The skill source (same content, package form) |
 | [`skill/references/`](skill/references/) | Brand asset catalog, approved image library, CME language (reference only) |
 | [`skill/assets/`](skill/assets/) | Official logo PNGs (JHM · JHH · Bayview; color/reversed/BW, H/V) and approved campus photos |
