@@ -1,11 +1,11 @@
 ---
 name: jhsurgeryformat
-description: Create Johns Hopkins Department of Surgery presentation drafts — grand rounds, M&M conference, conference posters (any size), podium/plenary research talks, invited case presentations, journal club decks, and letters on official letterhead — with correct JHH or Bayview branding, logo selection, and strict no-PHI placeholders. Use when a Department of Surgery member asks for help starting, drafting, or formatting any presentation, poster, talk, or letter.
+description: Create Johns Hopkins Department of Surgery presentation drafts — grand rounds, internal case-review conferences, conference posters (any size), podium/plenary research talks, invited case presentations, journal club decks, and letters on official letterhead — with correct JHH or Bayview branding, logo selection, and strict no-PHI placeholders. Use when a Department of Surgery member asks for help starting, drafting, or formatting any presentation, poster, talk, or letter.
 ---
 
 # JH Surgery Format
 
-A formatting skill for the Department of Surgery, The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center. It turns a brief description ("I'm giving an M&M on Tuesday", "my poster got into ACS", "I need a grand rounds on AAA repair") into a properly branded rough-draft file the presenter finishes themselves — and because the official brand standards are baked in, every draft is Johns Hopkins brand-compliant by default, with zero effort from the user.
+A formatting skill for the Department of Surgery, The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center. It turns a brief description ("I'm presenting at our case conference Tuesday", "my poster got into ACS", "I need a grand rounds on AAA repair") into a properly branded rough-draft file the presenter finishes themselves — and because the official brand standards are baked in, every draft is Johns Hopkins brand-compliant by default, with zero effort from the user.
 
 **For colleagues new to Claude:** attach this file (or install it as a skill and type `/jhsurgeryformat`), then say in one or two sentences what you need — the type of presentation, your topic, and where/when you're presenting. Claude will ask a couple of questions and build you a starting draft as a real PowerPoint or Word file. You never need to paste patient information — the draft uses placeholders you fill in later on a hospital computer.
 
@@ -17,7 +17,7 @@ A formatting skill for the Department of Surgery, The Johns Hopkins Hospital & J
 
 Determine the following, asking only for what the user hasn't already said (keep it to one short round of questions):
 
-1. **Format:** grand rounds · M&M · conference poster · podium/plenary research talk · invited case presentation · journal club · letter on letterhead.
+1. **Format:** grand rounds · internal case-review conference · conference poster · podium/plenary research talk · invited case presentation · journal club · letter on letterhead.
 2. **Hospital (JHH vs. Bayview):** determined by where the work was done. This drives the affiliation line, the closing-slide campus photo, and — on posters — which hospital lockup appears. (For decks the title-slide logo is plain JHM either way; you still need the hospital for the affiliation line and closing-slide photo — infer it from context and ask only if genuinely unclear.) Authors at both hospitals or a multi-site project → ask which hospital should be the focus, or whether both appear.
 3. **Venue and date** (conference name, city, meeting dates; or internal venue).
 4. **Talk length / slide budget** (a 5-minute quick-shot vs. 45-minute grand rounds changes slide count).
@@ -28,7 +28,7 @@ Determine the following, asking only for what the user hasn't already said (keep
 ## Step 2 — PHI guardrail (hard rule, never skip)
 
 - **Never place patient-identifying information in any generated file**: no names, initials, MRNs, exact dates of care, or identifiable images.
-- Case-based formats (M&M, case presentation) are generated **entirely from bracketed placeholders**: `[age]`, `[sex]`, `[mechanism/diagnosis]`, `[POD #]`, `[imaging placeholder]`, `[complication 1]`, etc.
+- Case-based formats (case-review conferences, case presentations) are generated **entirely from bracketed placeholders**: `[age]`, `[sex]`, `[mechanism/diagnosis]`, `[POD #]`, `[imaging placeholder]`, `[complication 1]`, etc.
 - If the user pastes real patient details, generalize them into placeholders in the draft and remind them (once, briefly) that clinical details should be added on a secure hospital machine.
 - Do not put the CME language or any confidentiality statement into any deck — see Appendix B.
 
@@ -105,9 +105,9 @@ When authors span institutions: **superscript numbers after each name** ("First 
 
 Default to the **standard white 16:9 template** (Step 3); alternatives are the **grey variant** (Step 3) or the official blue .potx template backgrounds (rebuild those looks at 16:9 — the .potx files themselves are 4:3, so ask before delivering an actual 4:3 deck). Structure: Title (topic, presenter, "Department of Surgery Grand Rounds", date) → optional presenter-disclosure slide (see G) → Objectives (3–4 learner-oriented bullets) → clinically organized body (anatomy/background → evidence → cases-as-placeholders → technique → outcomes) → "Take-home points" → References → Thanks/Questions. ~1 slide per minute minus discussion. **Do not insert the CME INFORMATION slide** — that is shown separately (Appendix B).
 
-### B. M&M conference
+### B. Internal case-review conference (chronological case format)
 
-Standard 16:9 template, footer center label "M&M". Structure is rigid:
+Standard 16:9 template, footer center label matching the conference name. Use this blueprint whenever the user names an internal case-review or QI conference. Structure is rigid:
 
 1. **Slide 1 = the whole case in miniature:**
    - Bold black text block: one-paragraph case synopsis — `[age/sex] [mechanism/diagnosis], requiring [operations/interventions in sequence]`
@@ -200,4 +200,4 @@ Full catalog with direct download links: `references/brand-assets.md`. Portal co
 
 ## Appendix B — CME language (reference only — NEVER insert into a deck)
 
-Grand rounds CME accreditation language (ACCME statement, credit designation, disclosure policy, off-label notice, MOC/ABS statements) and the M&M confidentiality statement are **handled separately in a different PowerPoint** maintained by the department — they do not go into presenter decks. The verbatim language is kept in `references/cme-language.md` purely so it can be recognized — its headings are: ACCREDITATION STATEMENT, CREDIT DESIGNATION STATEMENT, POLICY ON PRESENTER AND PROVIDER DISCLOSURE, NOTICE ABOUT OFF-LABEL USE PRESENTATIONS, MOC STATEMENT, AMERICAN BOARD OF SURGERY. If a user asks to add it, explain the department handles it separately. **The presenter's own financial-disclosure slide (Blueprint G) is a different thing and IS appropriate in decks.**
+Grand rounds CME accreditation language (ACCME statement, credit designation, disclosure policy, off-label notice, MOC/ABS statements) and the case-conference confidentiality statement are **handled separately in a different PowerPoint** maintained by the department — they do not go into presenter decks. The verbatim language is kept in `references/cme-language.md` purely so it can be recognized — its headings are: ACCREDITATION STATEMENT, CREDIT DESIGNATION STATEMENT, POLICY ON PRESENTER AND PROVIDER DISCLOSURE, NOTICE ABOUT OFF-LABEL USE PRESENTATIONS, MOC STATEMENT, AMERICAN BOARD OF SURGERY. If a user asks to add it, explain the department handles it separately. **The presenter's own financial-disclosure slide (Blueprint G) is a different thing and IS appropriate in decks.**
