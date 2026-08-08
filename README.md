@@ -2,7 +2,7 @@
 
 **A Claude formatting skill for the Johns Hopkins Department of Surgery** — The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center.
 
-Maintained by David P. Stonko, MD, MS. Version 2.1 — August 2026. Installed-skill command: `/jhsurgeryformat`.
+Maintained by David P. Stonko, MD, MS. Version 2.3 — August 2026. Installed-skill command: `/jhsurgeryformat`.
 
 ## What this is
 
