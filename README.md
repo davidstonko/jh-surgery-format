@@ -2,7 +2,7 @@
 
 **A Claude formatting skill for the Johns Hopkins Department of Surgery** — The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center.
 
-Maintained by David P. Stonko, MD, MS. Version 2.5 — August 2026. Installed-skill command: `/jhsurgeryformat`.
+Maintained by David P. Stonko, MD, MS. Version 2.6 — August 2026. Installed-skill command: `/jhsurgeryformat`. Latest packaged version: see [Releases](https://github.com/davidstonko/jh-surgery-format/releases).
 
 ## What this is
 
@@ -30,6 +30,10 @@ That's it. No patient data ever goes into the chat.
 | Podium / plenary talk | Findings-first slides, methods as a visual timeline, one message per slide |
 | Invited case presentation | Imaging-led narrative with decision-point slides and TEACHING POINTS closer |
 | Journal club | PICO → methods → results → critical appraisal → discussion questions |
+| Conference abstract | Reformatted to your meeting's word limit and headings (Claude looks up the spec), delivered as .docx + paste-ready text |
+| Lab meeting / works-in-progress | Informal figure-led update deck: progress → roadblocks → next steps → asks |
+| Chalk talk | One-page board plan (hypothesis, aims, timeline) plus optional mini backup deck |
+| Trainee talks | Research day podium (same system as faculty) and interview "tell us about your research" decks |
 | Letter on letterhead | Official JHH letterhead layout, optional grammar audit with redline edits |
 | Anything else | The adaptability rule: Claude builds it from the same colors, fonts, and logo rules |
 
@@ -59,6 +63,10 @@ The installed skill is the token-efficient path, not just the beginner path:
 - **Logos:** plain Johns Hopkins Medicine logo on deck title slides only; no logo on content slides; full hospital lockup (JHH or Bayview, by where the work was done) on posters; official letterhead for letters. Never redraw, recolor, or stretch a logo.
 - **Design:** Heritage Blue `#002D72` + gold `#F1C400`, Arial, 16:9 at 13.33"×7.5", findings-first titles, auto-updating date and slide-number fields (no macros).
 - **CME/accreditation language stays out of decks** — the department handles it separately.
+
+## Scope and intended use
+
+This is an internal departmental tool built and maintained by a member of the Johns Hopkins Department of Surgery. It is **not an official Johns Hopkins Medicine product**, and nothing here is endorsed by JHM Marketing & Communications. The logo files and campus photographs in this repository come from the official [Johns Hopkins Brand Portal](https://assets.jh.edu) and are included solely so that Hopkins-affiliated colleagues can produce brand-compliant materials; they are for use by people employed by or officially connected to Johns Hopkins, on official activities, and should not be redistributed or used outside that context. If you are not Hopkins-affiliated, you are welcome to read the skill as a worked example of a departmental formatting skill, but please do not use the brand assets.
 
 ## Contributing / updating
 

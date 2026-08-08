@@ -1,6 +1,6 @@
 # JH Surgery Format — attach this file to Claude and describe your presentation
 
-*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.5 — August 2026. Installed-skill command: `/jhsurgeryformat`.*
+*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.6 — August 2026. Installed-skill command: `/jhsurgeryformat`.*
 
 # JH Surgery Format
 
@@ -16,7 +16,7 @@ A formatting skill for the Department of Surgery, The Johns Hopkins Hospital & J
 
 Determine the following, asking only for what the user hasn't already said (keep it to one short round of questions):
 
-1. **Format:** grand rounds · internal case-review conference · conference poster · podium/plenary research talk · invited case presentation · journal club · letter on letterhead.
+1. **Format:** grand rounds · internal case-review conference · conference poster · podium/plenary research talk · invited case presentation · journal club · conference abstract · lab meeting / works-in-progress · chalk talk · trainee talk (research day, interview) · letter on letterhead.
 2. **Hospital (JHH vs. Bayview):** determined by where the work was done. This drives the affiliation line, the closing-slide campus photo, and — on posters — which hospital lockup appears. (For decks the title-slide logo is plain JHM either way; you still need the hospital for the affiliation line and closing-slide photo — infer it from context and ask only if genuinely unclear.) Authors at both hospitals or a multi-site project → ask which hospital should be the focus, or whether both appear.
 3. **Venue and date** (conference name, city, meeting dates; or internal venue).
 4. **Talk length / slide budget** (a 5-minute quick-shot vs. 45-minute grand rounds changes slide count).
@@ -161,6 +161,29 @@ Standard 16:9 template, footer label "Journal Club". Structure: Title (paper cit
 - **Printing handoff note (always include when delivering a letter):** after handing over the file, tell the user in chat how to print it in line with JH branding — official stationery is printed on **Strathmore Writing, Bright White, Wove finish, 24 lb. Text** via **offset lithography** (brandmark in PMS 288 + PMS 7406, address block in JHM Blue, 2/0, no bleed), so for formal use they should order pre-printed stationery through JHM stationery ordering and print only the body text onto it; for everyday correspondence, printing the whole letter on a color printer on bright white paper is acceptable, and the electronic version already uses the standard's Arial substitution.
 - No PHI in letters drafted with this skill. **Style: write like a person, not a template — no em-dashes in letters** (use commas, colons, or separate sentences), vary sentence length, and avoid formulaic constructions; if a "humanizer"-type writing skill is available, apply it to letter prose.
 
+### I. Conference abstract (text formatter — the step before every poster and podium talk)
+
+Not a slide product: a text deliverable that reformats the user's draft abstract (or aims + data) to a specific meeting's submission requirements.
+
+1. **Look up that meeting's current abstract specifications** (web-search the call-for-abstracts / presenter guidelines): word or character limit, required section headings (e.g., Objective/Methods/Results/Conclusions vs. free-form), table or figure allowance, and blinding rules — many meetings forbid institution names in the abstract body.
+2. **If specs can't be found, ask the user** for the limit and required headings — same rule as posters (Step 4C).
+3. **Tighten to spec, never invent.** Keep every number the user provided; put `[placeholder]` where a value is missing and flag it. Conventional structure: Objective (one sentence, the gap + aim) → Methods (design, cohort, primary outcome, analysis) → Results (real numbers first — effect sizes with CIs, then p-values) → Conclusions (1–2 declarative sentences that match the data shown). Findings-first declarative title in the house style unless the meeting forbids it. Author list with degrees and affiliations per house rules (superscripts for multi-institution); omit institutions from the body if the review is blinded.
+4. **Deliver both forms:** a .docx and a plain-text block ready to paste into the submission portal, and **report the word/character count against the limit** so the user can see the headroom.
+5. Close the loop: note that once it's accepted, the same skill builds the poster (4C) or podium deck (4D) directly from this abstract.
+
+### J. Lab meeting / works-in-progress (informal internal)
+
+Standard 16:9 template, footer center label "[Lab name] Lab Meeting" or "Works in Progress". Lighter formality: plain names fine, no disclosure slide. Structure: Title (project · presenter · date) → Where we left off (one-slide recap) → Progress since last time (figure-led, one result per slide) → **Problems / roadblocks** (a slide that explicitly invites input — this is the point of lab meeting) → Next steps with a short timeline → **Asks** (stats help, samples, reagents, access). 6–10 slides; preliminary or unpolished figures are acceptable here — label them "PRELIMINARY". PHI rules still apply in full.
+
+### K. Chalk talk (research-vision format — faculty candidates, K-awardees, senior trainees)
+
+Classically slide-free, so the deliverable is different: a **one-page board plan** (.docx) mapping what gets drawn where — center: central hypothesis/model diagram; left: background and the gap; right: specific aims with key experiments under each; bottom corner: timeline and funding plan (F/K → R pathway where relevant). Narrative arc for the talk itself: hook → gap → central hypothesis → Aims 1–3 with expected outcomes *and* pitfalls/alternatives → 5-year vision. Offer an optional 3–5 slide backup deck on the standard template (title · model figure · aims overview · timeline) for venues that allow a few slides.
+
+### L. Trainee talks (research day; residency/fellowship interview presentations)
+
+- **Research day / trainee podium:** identical design system to Blueprint D — trainees get the same template as faculty. Event line names the research day; mentor goes in the senior-author position; typical length 8–10 minutes.
+- **Interview talk ("tell us about your research"):** 10–15 slides. Structure: brief who-am-I slide (photo placeholder + 3–4 bullets) → research arc told as a narrative (2–3 projects maximum, one message per slide, figure-led) → techniques/skills summary → what I want to do next and fit with the program → Thanks. Standard logo rules apply; when interviewing **away from Hopkins**, the grey variant is a good neutral-venue choice, keeping the plain JHM mark on the title slide only.
+
 ## Step 5 — Smart enrichment (before delivering any draft)
 
 Before handing over the rough draft, actively look for ways to make it a better starting point. Match the enrichment to the deliverable — research it when it helps, skip it when it doesn't:
@@ -189,7 +212,7 @@ Before handing over the rough draft, actively look for ways to make it a better 
 
 ### QA checklist before delivering
 
-☐ Logo rules followed (plain JHM on title slide only — grey variant may omit it per Step 3; no logo on content slides; full hospital lockup on posters) ☐ findings-first title ☐ footer bar on every slide (date · event · #) ☐ no PHI anywhere ☐ backup slides after Thanks ☐ poster: dimensions match conference spec, IRB + contact in footer ☐ degrees on external materials ☐ red used only for critical emphasis ☐ looked-up affiliations/degrees marked `[verify]` ☐ attribution line at division level only when authors are *confirmed* to share a division.
+☐ Logo rules followed (plain JHM on title slide only — grey variant may omit it per Step 3; no logo on content slides; full hospital lockup on posters) ☐ findings-first title ☐ footer bar on every slide (date · event · #) ☐ no PHI anywhere ☐ backup slides after Thanks ☐ poster: dimensions match conference spec, IRB + contact in footer ☐ abstract: within the meeting's word/character limit, headings match its guidelines, blinding respected ☐ degrees on external materials ☐ red used only for critical emphasis ☐ looked-up affiliations/degrees marked `[verify]` ☐ attribution line at division level only when authors are *confirmed* to share a division.
 
 ---
 
@@ -212,7 +235,7 @@ Grand rounds CME accreditation language (ACCME statement, credit designation, di
 
 ## Bundled hero photos (in `assets/photos/`)
 
-These three are the approved go-to images, shipped with the installed skill package — users of this standalone file: ask-then-download from the public repo per Step 6, else use the labeled `[campus photo — JHH or Bayview]` placeholder:
+These three are the approved go-to images, shipped with the installed skill package (attach-only users of the standalone markdown: use the labeled `[campus photo — JHH or Bayview]` placeholder per Step 6 instead):
 
 | File | Subject | Use |
 |---|---|---|
@@ -387,7 +410,7 @@ All the selection rules in the matrix above apply — substitute `Bayview` for `
 
 ### Extracted design specifications (from the .potx internals)
 
-These are historical measurements of the official 4:3 .potx masters, kept for context. **Where anything here differs from the skill's design system (Step 3 above), Step 3 wins** — including type scale and logo selection:
+These are historical measurements of the official 4:3 .potx masters, kept for context. **Where anything here differs from the skill's design system (SKILL.md Step 3), SKILL.md wins** — including type scale and logo selection:
 
 - **Slide size:** all five official templates are **4:3 (10" × 7.5")**. *(Modern conference projectors are typically 16:9 — the skill should ask the user, defaulting to 16:9 while carrying over the color/typography system.)*
 - **Typeface:** **Arial** for both headings and body (major + minor font).
@@ -410,7 +433,7 @@ These are historical measurements of the official 4:3 .potx masters, kept for co
 
 - **Hospital selection first:** determine JHH vs. Bayview (or both) from the project site/author affiliations; ask if ambiguous.
 - **Asset selection is medium-driven:** EPS (or 500-DPI PNG) for print posters; transparent PNG for slides, matched to background (standard on light, `-2R` on dark); JPG only on white documents.
-- **Generated decks should mirror the sanctioned templates' colors, typography, and motifs** (Heritage Blue + gold system, Arial) even when building 16:9 decks from scratch — but logo selection follows Step 3 above: plain JHM on deck title slides, hospital lockups on posters.
+- **Generated decks should mirror the sanctioned templates' colors, typography, and motifs** (Heritage Blue + gold system, Arial) even when building 16:9 decks from scratch — but logo selection follows SKILL.md: plain JHM on deck title slides, hospital lockups on posters.
 - **PHI rule:** no patient identifiers or protected data ever; generated drafts use placeholder case details only.
 - **Portal downloads** prompt for a brief "reason for download"; colleagues download assets themselves via the links here.
 
