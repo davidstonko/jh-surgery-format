@@ -2,11 +2,11 @@
 
 **A Claude formatting skill for the Johns Hopkins Department of Surgery** — The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center.
 
-Maintained by David P. Stonko, MD, MS. Version 2.3 — August 2026. Installed-skill command: `/jhsurgeryformat`.
+Maintained by David P. Stonko, MD, MS. Version 2.5 — August 2026. Installed-skill command: `/jhsurgeryformat`.
 
 ## What this is
 
-Tell Claude what you're presenting — *"I'm giving an M&M on Tuesday," "my poster got accepted to ACS," "I need a grand rounds on AAA repair"* — and this skill turns that into a properly branded rough-draft file you finish yourself: a real PowerPoint deck, a correctly sized conference poster, or a letter on official letterhead.
+Tell Claude what you're presenting — *"my poster got accepted to ACS," "I need a grand rounds on AAA repair," "put this letter on department letterhead"* — and this skill turns that into a properly branded rough-draft file you finish yourself: a real PowerPoint deck, a correctly sized conference poster, or a letter on official letterhead.
 
 It knows the department's design system (Heritage Blue and gold, the standard title-slide layout, logo rules, footer conventions), the structure of each presentation type, and it **never touches patient information** — case-based drafts are built entirely from bracketed placeholders you fill in on a hospital computer.
 
@@ -25,7 +25,7 @@ That's it. No patient data ever goes into the chat.
 | Format | What you get |
 |---|---|
 | Grand rounds | Full 16:9 deck: title → disclosure → objectives → body → take-home points |
-| M&M conference | The department's rigid case format, entirely from placeholders |
+| Case-review conference | Rigid chronological case format, entirely from placeholders |
 | Conference poster | Sized to your conference's spec (Claude looks it up), navy/gold three-column system, IRB + contact footer |
 | Podium / plenary talk | Findings-first slides, methods as a visual timeline, one message per slide |
 | Invited case presentation | Imaging-led narrative with decision-point slides and TEACHING POINTS closer |
