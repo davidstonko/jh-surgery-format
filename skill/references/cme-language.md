@@ -22,6 +22,6 @@ The Johns Hopkins School of Medicine is committed to the free exchange of medica
 
 It is the CME activity provider's responsibility to submit learner completion information to ACCME for the purpose of granting ABS credit.
 
-## M&M
+## Case-review conferences
 
-No confidentiality or peer-review boilerplate is placed in M&M decks; it is likewise handled separately.
+No confidentiality or peer-review boilerplate is placed in case-review conference decks; it is likewise handled separately.
