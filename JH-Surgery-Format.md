@@ -1,12 +1,14 @@
 # JH Surgery Format — attach this file to Claude and describe your presentation
 
-*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.0 — August 2026.*
+*Johns Hopkins Department of Surgery presentation formatting skill. Maintained by David P. Stonko, MD, MS. v2.1 — August 2026. Installed-skill command: `/jhsurgeryformat`.*
 
 # JH Surgery Format
 
 A formatting skill for the Department of Surgery, The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center. It turns a brief description ("I'm giving an M&M on Tuesday", "my poster got into ACS", "I need a grand rounds on AAA repair") into a properly branded rough-draft file the presenter finishes themselves.
 
-**For colleagues new to Claude:** attach this file (or install it as a skill), then say in one or two sentences what you need — the type of presentation, your topic, and where/when you're presenting. Claude will ask a couple of questions and build you a starting draft as a real PowerPoint or Word file. You never need to paste patient information — the draft uses placeholders you fill in later on a hospital computer.
+**For colleagues new to Claude:** attach this file (or install it as a skill and type `/jhsurgeryformat`), then say in one or two sentences what you need — the type of presentation, your topic, and where/when you're presenting. Claude will ask a couple of questions and build you a starting draft as a real PowerPoint or Word file. You never need to paste patient information — the draft uses placeholders you fill in later on a hospital computer.
+
+**For colleagues already fluent with Claude:** install this as a skill rather than re-explaining the house style each time. As an installed skill, only its one-line description occupies context until it's invoked, the reference files load on demand, and the skill text is byte-identical every session — so it sits in the cached prompt prefix instead of being reprocessed each conversation. Compare that with the alternatives: pasting formatting instructions fresh each time (different tokens every session, no cache reuse, inconsistent results) or attaching an old deck as a style exemplar (parsing a .pptx can cost 10–100× the tokens of this whole skill, every single time). The skill also front-loads the answers Claude would otherwise burn turns rediscovering — exact hex values, slide geometry, logo rules, blueprint structures — which means fewer clarifying questions, fewer revision cycles, and more of the context window left for your actual science.
 
 ---
 

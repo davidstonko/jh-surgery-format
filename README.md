@@ -2,7 +2,7 @@
 
 **A Claude formatting skill for the Johns Hopkins Department of Surgery** — The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center.
 
-Maintained by David P. Stonko, MD, MS. Version 2.0 — August 2026.
+Maintained by David P. Stonko, MD, MS. Version 2.1 — August 2026. Installed-skill command: `/jhsurgeryformat`.
 
 ## What this is
 
@@ -13,7 +13,7 @@ It knows the department's design system (Heritage Blue and gold, the standard ti
 ## Quick start (no experience with Claude needed)
 
 1. Download **[`JH-Surgery-Format.md`](JH-Surgery-Format.md)** (click the file, then the download icon).
-2. Go to [claude.ai](https://claude.ai), start a new chat, and **attach the file**.
+2. Go to [claude.ai](https://claude.ai), start a new chat, and **attach the file**. (Or install [`jh-surgery-format.skill`](jh-surgery-format.skill) and type **`/jhsurgeryformat`**.)
 3. Say what you need in one or two sentences: the type of presentation, your topic, and where/when you're presenting.
 4. Answer the couple of questions Claude asks (talk length, background style). You'll get a draft file with `[bracketed placeholders]` wherever your content goes.
 
@@ -31,6 +31,15 @@ That's it. No patient data ever goes into the chat.
 | Journal club | PICO → methods → results → critical appraisal → discussion questions |
 | Letter on letterhead | Official JHH letterhead layout, optional grammar audit with redline edits |
 | Anything else | The adaptability rule: Claude builds it from the same colors, fonts, and logo rules |
+
+## Already a Claude power user? Install the skill anyway
+
+The installed skill is the token-efficient path, not just the beginner path:
+
+- **Near-zero standing cost:** until invoked, only the skill's one-line description sits in context; the reference files (brand catalog, image library, CME language) load only when a task needs them.
+- **Cache-friendly by construction:** the skill text is identical in every session, so it lives in the cached prompt prefix rather than being re-tokenized and reprocessed each conversation — unlike instructions you paste fresh each time, which are never cache-identical twice.
+- **Replaces the expensive habit:** attaching an old deck as a style reference costs 10–100× the tokens of this entire skill on every use. The skill is that deck's design system, pre-extracted once.
+- **Fewer turns:** intake is one round of questions; hex codes, slide geometry, logo rules, and per-format structures are pre-computed, so Claude doesn't spend turns (and context) rediscovering them — and consistent rules mean fewer revision cycles, which are the real token sink.
 
 ## What's in this repository
 
