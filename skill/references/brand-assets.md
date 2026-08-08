@@ -147,6 +147,12 @@ These are historical measurements of the official 4:3 .potx masters, kept for co
 
 ---
 
+## Official letterhead standards (brand.hopkinsmedicine.org, Design Standards → Letterhead, updated 3/2023)
+
+- **General letterhead:** address block at 1" from left, 1/2" from top, 5" wide; brandmark 1-5/8" top-right; entity name in bold as the first address line; second sheets blank; no affiliate or other-institution logos or co-branding ever.
+- **Personalized letterhead:** personalization block (1" from left, 1-3/4" wide: name+degrees bold, titles italic, up to 3 names) → address block (3-1/4" wide: dept bold, address, T/F phone lines, @jhmi.edu email) → brandmark 1-5/8" top-right. 8.5"×11"; logo prints PMS 288 + PMS 7406; all header text JHM Blue; typography Gill Sans 8 pt / 10 pt leading (bold names, italic titles) — **Word/electronic versions substitute Arial**. Format applies to all approved brandmarks.
+- Pages: [General](https://brand.hopkinsmedicine.org/brand/design-standards/letterhead/general-letterhead) · [Personalized](https://brand.hopkinsmedicine.org/brand/design-standards/letterhead/personalized-letterhead)
+
 ## Notes for the JH Surgery Format skill
 
 - **Hospital selection first:** determine JHH vs. Bayview (or both) from the project site/author affiliations; ask if ambiguous.
