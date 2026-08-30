@@ -60,7 +60,7 @@ Determine the following, asking only for what the user hasn't already said (keep
 
 **On posters:** use the **full hospital lockup** (JHM + "THE JOHNS HOPKINS HOSPITAL" or Bayview line) — `H/V-JHH-…` or `H/V-Bayview-…` per the site of the work.
 
-**Letters:** default to the official JHH letterhead template (its own lockup). Bayview-based authors: reproduce the letterhead layout with the Bayview lockup instead.
+**Letters:** build inside the packaged official template `assets/Letterhead_JHM_JHH.dot` (Blueprint H). Its brandmark is the **vertical** hospital lockup at top-right: `V-JHH-2`, or `V-Bayview-2` for Bayview-based authors. Never put the horizontal `H-` lockup or the plain JHM mark on a letter, and never hand-build the header when the template is available.
 
 **Everything else (flyers, one-off formats):** may use either the plain JHM logo or a full hospital lockup depending on what the user wants — ask.
 
@@ -68,7 +68,8 @@ Determine the following, asking only for what the user hasn't already said (keep
 |---|---|
 | Deck title slide (default) | plain JHM logo, transparent PNG (`H-JHM-2` style; reversed `-2R` on dark backgrounds) |
 | Poster | full lockup `<H/V>-<entity>-2.eps` (vector) or the 500-DPI PNG |
-| Word/letter, white background | packaged `H-<entity>-2.png` (transparent renders fine on white; the `.jpg` variants are portal downloads only) |
+| **Letter on letterhead** | **`assets/Letterhead_JHM_JHH.dot`** — the official template ships with this skill. Its brandmark is the **vertical** hospital lockup (`V-<entity>-2`) at top-right. Never the horizontal `H-` lockup, never the plain JHM mark. |
+| Other Word doc, white background | packaged `H-<entity>-2.png` (transparent renders fine on white; the `.jpg` variants are portal downloads only) |
 | B&W reproduction | `-BW` variants |
 
 `<entity>` = `JHH` or `Bayview`. H (horizontal) for everything except stationery/narrow spaces; V (vertical) for stationery. Never recolor, stretch, add effects to, or re-draw a logo. The packaged `assets/H-JHM-*.png` and `assets/V-JHM-*.png` files are the official plain JHM logos. Download links: `references/brand-assets.md` (or the "Brand asset library" section of the standalone file).
@@ -146,7 +147,32 @@ Standard 16:9 template, footer label "Journal Club". Structure: Title (paper cit
 - **Disclosure slide** (immediately after title): "Disclosure" title; bullets following the house pattern — "In-Kind Commercial Support: [company] provided [what] used in this study." · "[Author initials]: [relationship, e.g., received payments from [company] for [purpose]], none related to this work." · closing line "No other authors have anything to disclose." — or simply "No relevant financial relationships to disclose." Add "[Funding source]" if the work was funded.
 - **Bio slide** (invited talks, optional): speaker photo placeholder left; name + degrees, title(s), division/department, 3–4 career bullet points right.
 
-### H. Letter on letterhead (JHH template default; Bayview reproduction)
+### H. Letter on letterhead (build from the packaged official template)
+
+**Build it from the packaged template, do not redraw it.** `assets/Letterhead_JHM_JHH.dot` is the official file (BrandSavvy, Inc., 2008) and `assets/Letterhead_JHM_JHH.docx` is the same thing pre-converted for programmatic editing. The portal copy at assets.jh.edu is behind JHED SSO, so the packaged one is the only copy Claude can reach. Reproducing the layout by hand is the single most common failure of this skill: it has produced letters with the horizontal lockup on the wrong side more than once. Start from the file.
+
+**If the packaged assets are not present** (the user attached the standalone markdown alone): ask first, then fetch the template from `https://raw.githubusercontent.com/davidstonko/jh-surgery-format/main/skill/assets/Letterhead_JHM_JHH.dot`, the same way Step 6 handles logos. Only if that download fails should you reproduce the layout by hand, and then follow the geometry below exactly: vertical hospital lockup **1-5/8" wide, top-right**, sender block **top-left at 1" from the left, 1/2" from the top**, all header text JHM Blue `#002D72` in Arial, body starting ~2.2" from the top.
+
+**Mechanics of filling the template (they are not obvious):**
+
+1. Convert if needed: `soffice --headless --convert-to docx assets/Letterhead_JHM_JHH.dot`.
+2. The sender block is a **floating text frame inside `word/document.xml`** — not in the header part, and invisible to `python-docx`'s paragraph list. Fill it by string-replacing the placeholder lines in the raw XML. Each appears **twice** (the `mc:AlternateContent` primary and its fallback), so replace all occurrences:
+
+   | Placeholder | Fill with |
+   |---|---|
+   | `The Johns Hopkins Hospital` (bold) | leave as is; Bayview → `Johns Hopkins Bayview Medical Center` |
+   | `Department Name if needed` (bold) | the author's department, e.g. `Department of Surgery` |
+   | `1234 Street Address / Suite 100` | street address and room/suite |
+   | `City, State 12345-6789` | city, state, ZIP |
+   | `123-456-7890 T` | phone, keeping the trailing ` T` |
+   | `123-456-7891 F` | fax with trailing ` F`, or the author's email if they have no fax |
+
+   Every value must fit on **one line** in the frame. A line that wraps pushes the last line out of the frame and it vanishes with no error, so keep values short (drop the division name if the department line already covers it) and confirm all six lines survive in the rendered PDF.
+3. The brandmark is a drawing anchored to **one body paragraph**. When clearing the template body to write the letter, **keep every paragraph whose XML contains `txbxContent`, `w:drawing`, `w:pict` or `w:framePr`**, and delete only the others. Deleting that paragraph silently deletes the letterhead.
+4. The template's top margin is **2.23"**, which costs roughly six lines against a plain page. Plan the letter's length for that: a one-page letter here is about 450 words plus the address and sign-off blocks.
+5. **Render to PDF and look at the image before delivering.** Check: vertical lockup top-right, all six sender lines present, body clears the letterhead, letter fits one page.
+
+**Never invent contact details.** Take the phone, address, room number and email from the author's CV or from what they told you. If you do not have one, ask, or leave the line out. Do not fill it with a plausible-looking number.
 
 **First ask: personalized or general letterhead?** Personalized (default for letters an individual signs, e.g., recommendations) carries the author's name block; **general letterhead carries no individual's name** — just the department address block and brandmark — and is right for department-level or office correspondence. Both follow the official JHM standards (brand.hopkinsmedicine.org → Design Standards → Letterhead).
 
@@ -213,7 +239,7 @@ Before handing over the rough draft, actively look for ways to make it a better 
 
 ### QA checklist before delivering
 
-☐ Logo rules followed (plain JHM on title slide only — grey variant may omit it per Step 3; no logo on content slides; full hospital lockup on posters) ☐ findings-first title ☐ footer bar on every slide (date · event · #) ☐ no PHI anywhere ☐ backup slides after Thanks ☐ poster: dimensions match conference spec, IRB + contact in footer ☐ abstract: within the meeting's word/character limit, headings match its guidelines, blinding respected ☐ degrees on external materials ☐ red used only for critical emphasis ☐ looked-up affiliations/degrees marked `[verify]` ☐ attribution line at division level only when authors are *confirmed* to share a division.
+☐ **letter built from `assets/Letterhead_JHM_JHH.dot`, not hand-built; vertical lockup top-right; all six sender lines visible in the rendered PDF** ☐ letter contact details taken from the author's CV or their stated details, never invented ☐ Logo rules followed (plain JHM on title slide only — grey variant may omit it per Step 3; no logo on content slides; full hospital lockup on posters) ☐ findings-first title ☐ footer bar on every slide (date · event · #) ☐ no PHI anywhere ☐ backup slides after Thanks ☐ poster: dimensions match conference spec, IRB + contact in footer ☐ abstract: within the meeting's word/character limit, headings match its guidelines, blinding respected ☐ degrees on external materials ☐ red used only for critical emphasis ☐ looked-up affiliations/degrees marked `[verify]` ☐ attribution line at division level only when authors are *confirmed* to share a division.
 
 ---
 

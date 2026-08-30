@@ -46,7 +46,8 @@ Both logo families use the identical variant scheme, so every selection rule bel
 | Printed conference poster | `H-<entity>-2.eps` (or 500-DPI PNG if EPS unsupported) |
 | Slide deck, light background | `H-<entity>-2.png` |
 | Slide deck, dark/Heritage Blue background | `H-<entity>-2R.png` |
-| Word doc / white background | `H-<entity>-2.jpg` (or the transparent PNG, which renders fine on white) |
+| Letter on letterhead | **`assets/Letterhead_JHM_JHH.dot`**, packaged with this skill — never rebuild the header; its brandmark is the vertical `V-<entity>-2` lockup, top-right |
+| Other Word doc / white background | `H-<entity>-2.jpg` (or the transparent PNG, which renders fine on white) |
 | One-color or B&W reproduction | `-BW` variant |
 | Stationery / narrow vertical space | `V-` variants of the above |
 
@@ -130,7 +131,7 @@ All the selection rules in the matrix above apply — substitute `Bayview` for `
 
 | File | Purpose | Size | Direct link |
 |---|---|---|---|
-| Letterhead_JHM_JHH.dot | Official JHH letterhead (by BrandSavvy, Inc., 2008) | 38.40 kB | [Open](https://assets.jh.edu/web/9348931fb6c0192c/template-johns-hopkins-hospital/?viewType=grid&mediaId=74F9EE42-65E9-47FB-85754E4580849BA4) |
+| Letterhead_JHM_JHH.dot | Official JHH letterhead (by BrandSavvy, Inc., 2008). **Packaged with this skill at `assets/Letterhead_JHM_JHH.dot`**, plus a pre-converted `.docx` — the portal copy is behind JHED SSO, so use the packaged one. | 38.40 kB | [Open](https://assets.jh.edu/web/9348931fb6c0192c/template-johns-hopkins-hospital/?viewType=grid&mediaId=74F9EE42-65E9-47FB-85754E4580849BA4) |
 | Report_BW-JHM_JHH.dot | Report template, B&W | 429.57 kB | [Open](https://assets.jh.edu/web/9348931fb6c0192c/template-johns-hopkins-hospital/?viewType=grid&mediaId=96B053E0-217C-4B45-B9C12C30BAB6A68C) |
 
 ### Extracted design specifications (from the .potx internals)

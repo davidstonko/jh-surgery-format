@@ -2,7 +2,7 @@
 
 **A Claude formatting skill for the Johns Hopkins Department of Surgery** — The Johns Hopkins Hospital & Johns Hopkins Bayview Medical Center.
 
-Maintained by David P. Stonko, MD, MS. Version 2.6 — August 2026. Installed-skill command: `/jhsurgeryformat`. Latest packaged version: see [Releases](https://github.com/davidstonko/jh-surgery-format/releases).
+Maintained by David P. Stonko, MD, MS. Version 2.7 — August 2026. Installed-skill command: `/jhsurgeryformat`. Latest packaged version: see [Releases](https://github.com/davidstonko/jh-surgery-format/releases).
 
 ## What this is
 
@@ -34,7 +34,7 @@ That's it. No patient data ever goes into the chat.
 | Lab meeting / works-in-progress | Informal figure-led update deck: progress → roadblocks → next steps → asks |
 | Chalk talk | One-page board plan (hypothesis, aims, timeline) plus optional mini backup deck |
 | Trainee talks | Research day podium (same system as faculty) and interview "tell us about your research" decks |
-| Letter on letterhead | Official JHH letterhead layout, optional grammar audit with redline edits |
+| Letter on letterhead | Built inside the official `Letterhead_JHM_JHH.dot` template (packaged with the skill), optional grammar audit with redline edits |
 | Anything else | The adaptability rule: Claude builds it from the same colors, fonts, and logo rules |
 
 ## Already a Claude power user? Install the skill anyway
